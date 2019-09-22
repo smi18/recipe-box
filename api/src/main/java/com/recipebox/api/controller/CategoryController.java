@@ -22,14 +22,14 @@ public class CategoryController {
 		this.categoryRepository = repository;
 	}
 
-	@GetMapping("/categories")
+	@GetMapping("/api/categories")
 	List<Category> all(){
 		List<Category> categoryList = new ArrayList<>();
 		categoryRepository.findAll().forEach(e->categoryList.add(e));
 		return categoryList;
 	}
 	
-	@PostMapping("/categories")
+	@PostMapping("/api/categories")
     void addCategory(@RequestBody Category category) {
 		categoryRepository.save(category);
     }
