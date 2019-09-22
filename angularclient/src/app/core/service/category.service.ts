@@ -11,7 +11,7 @@ export class CategoryService {
   private categoriesUrl : string;
 
   constructor(private http:HttpClient) {
-    this.categoriesUrl = 'http://localhost:8080/categories'; 
+    this.categoriesUrl = 'http://localhost:8080/api/categories'; 
   }
 
   public findall():Observable<Category[]>{

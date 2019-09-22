@@ -18,7 +18,7 @@ public class RecipeController {
 		this.recipeRepository = recipeRepository;
 	}
 	
-	@GetMapping("/recipes")
+	@GetMapping("/api/recipes")
 	List<Recipe> all(){
 		List<Recipe> recipeList = new ArrayList<>();
 		recipeRepository.findAll().forEach(e->recipeList.add(e));
